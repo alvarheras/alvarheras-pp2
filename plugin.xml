@@ -5,7 +5,7 @@
   version="1.1.0">
 
   <name>Aes</name>
-
+  <description>Aes plugin description</description>
   <js-module src="www/Aes.js" name="Aes">
     <clobbers target="Aes" />
   </js-module>
