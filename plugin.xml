@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-aes"
+  version="1.1.0">
+
+  <name>Aes</name>
+
+  <js-module src="www/Aes.js" name="Aes">
+    <clobbers target="Aes" />
+  </js-module>
+
+  <dependency id="cordova-plugin-add-swift-support" url="cordova-plugin-add-swift-support"/>
+
+  <!-- ios -->  <!-- ios -->  <!-- ios -->  <!-- ios -->
+  <platform name="ios">
+
+    <source-file src="src/ios/aes.swift" />
+
+  </platform>
+  <!-- ios -->  <!-- ios -->  <!-- ios -->  <!-- ios -->
+
+<!-- android --> <!-- android --> <!-- android -->
+<platform name="android">
+    
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Aes">
+        <param name="android-package" value="de.alvaro.cordova.aes.Aes"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+     
+    </config-file>
+
+    <source-file src="src/android/Aes.java" target-dir="src/de/alvaro/cordova/aes" />
+    <source-file src="src/android/AESEncrypter.java" target-dir="src/de/alvaro/cordova/aes" />
+    
+</platform>
+<!-- android --> <!-- android --> <!-- android --> <!-- android -->
+
+</plugin>
